@@ -3,13 +3,14 @@
     <h1>LavaStore <code>Deno</code></h1>
     <p>A flexible and scalable local database for the web</p><br>
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/WilliamRagstad/LavaStore-Deno/Deno?style=flat-square&color=df5">
-    <img alt="GitHub release" src="https://img.shields.io/github/release/WilliamRagstad/LavaStore-Deno?style=flat-square"/>
+    <img alt="GitHub release" src="https://img.shields.io/github/release/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f70"/>
     <br/>
     <img alt="GitHub" src="https://img.shields.io/github/last-commit/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f70">
     <img alt="GitHub" src="https://img.shields.io/github/contributors/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f60">
 	<img alt="Deno" src="https://img.shields.io/badge/deno-1.18.0+-yellow.svg?style=flat-square"/>
     <br/>
 </div>
+
 
 
 
