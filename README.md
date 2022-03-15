@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/logo.png" width="250px"/>
+    <img src="./assets/logo.png" width="250px"/>
     <h1>LavaStore <code>Deno</code></h1>
     <p>A flexible and scalable local database for the web</p><br>
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/WilliamRagstad/LavaStore-Deno/Deno?style=flat-square&color=df5">
@@ -10,6 +10,7 @@
 	<img alt="Deno" src="https://img.shields.io/badge/deno-1.18.0+-yellow.svg?style=flat-square"/>
     <br/>
 </div>
+
 
 
 
