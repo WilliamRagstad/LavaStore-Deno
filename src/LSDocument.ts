@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import { IDictionary } from "./types.ts";
 import { LSCollection } from "./LSCollection.ts";
 
@@ -5,7 +6,6 @@ import { LSCollection } from "./LSCollection.ts";
  * LocalStorage Wrapper class
  */
 abstract class LSWrapper {
-  // deno-lint-ignore no-explicit-any
   public static Save = (label: string, data: any) =>
     localStorage.setItem("lavastore:" + label, JSON.stringify(data));
 
@@ -18,7 +18,7 @@ abstract class LSWrapper {
 
 // tslint:disable-next-line: max-classes-per-file
 export class LSDocument {
-  private fields = {};
+  private fields: Record<string, any> = {};
   public id = "";
   private _parent: LSCollection | undefined;
   public get parent(): LSCollection | undefined {
@@ -170,7 +170,6 @@ export class LSDocument {
     );
   }
 
-  // deno-lint-ignore no-explicit-any
   private build(): Record<string, any> {
     return {
       fields: this.fields,
@@ -205,14 +204,22 @@ export class LSDocument {
     } else LSWrapper.Save(this.id, this.build()); // This is root, store all containing data in one big object.
   }
 
-  // deno-lint-ignore no-explicit-any
   public Set(data: Record<string, any>) {
     this.fields = { ...data };
     this.Save();
   }
 
-  public Get() {
-    return this.fields;
+  /**
+   * Get a field from the document.
+   * @param field The field to get
+   * @returns The value of the field, or undefined if it does not exist
+   */
+  public Get(field: string): any {
+    return this.fields[field];
+  }
+
+  public Fields(): Record<string, any> {
+	return this.fields;
   }
 
   public HasData() {
@@ -224,7 +231,6 @@ export class LSDocument {
    * @param path path to document. Must follow ([COLLECTION]/[DOCUMENT])+ format! Eg. 'users/Bob/tweets/7GA1J4V'. Path can also be array like ['users', 'Bob', 'tweets', '7GA1J4V'].
    * @param data data to set document fields to
    */
-  // deno-lint-ignore no-explicit-any
   public SetPath(path: string | string[], data: Record<string, any>) {
     this.EnsurePath(path);
     this.DocumentPath(path).Set(data);
@@ -234,9 +240,8 @@ export class LSDocument {
    * Get data from a nested document
    * @param path path to document. Must follow ([COLLECTION]/[DOCUMENT])+ format! Eg. 'users/Bob/tweets/7GA1J4V'. Path can also be array like ['users', 'Bob', 'tweets', '7GA1J4V'].
    */
-  // deno-lint-ignore no-explicit-any
   public GetPath(path: string | string[]): Record<string, any> {
-    return this.DocumentPath(path).Get();
+    return this.DocumentPath(path).Fields();
   }
 
   /* Path helper functions */
@@ -304,7 +309,6 @@ export class LSDocument {
     return result as LSDocument;
   }
 
-  // deno-lint-ignore no-explicit-any
   public PassTo(callback: ((data: Record<string, any>) => any)) {
     callback(this.fields);
   }
