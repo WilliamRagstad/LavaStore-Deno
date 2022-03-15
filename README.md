@@ -2,12 +2,12 @@
     <img src="https://raw.githubusercontent.com/WilliamRagstad/LavaStore-Deno/main/assets/logo.png" width="250px"/>
     <h1>LavaStore <code>Deno</code></h1>
     <p>A flexible and scalable local database for the web</p><br>
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/WilliamRagstad/LavaStore-Deno/Deno?style=flat-square&color=ed5">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/WilliamRagstad/LavaStore-Deno/Deno?style=flat-square&color=yellow">
     <img alt="GitHub release" src="https://img.shields.io/github/release/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f70"/>
     <br/>
     <img alt="GitHub" src="https://img.shields.io/github/last-commit/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f70">
     <img alt="GitHub" src="https://img.shields.io/github/contributors/WilliamRagstad/LavaStore-Deno?style=flat-square&color=f60">
-	<img alt="Deno" src="https://img.shields.io/badge/deno-1.18.0+-yellow.svg?style=flat-square"/>
+    <img alt="Deno" src="https://img.shields.io/badge/deno-1.18.0+-yellow.svg?style=flat-square"/>
     <br/>
 </div>
 
