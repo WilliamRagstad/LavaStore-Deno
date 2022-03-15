@@ -1,4 +1,4 @@
-import { assertEquals, assert } from "https://deno.land/std@0.129.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.129.0/testing/asserts.ts";
 import { LavaStore } from "../mod.ts";
 
 /**
